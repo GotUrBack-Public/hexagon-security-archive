@@ -95,3 +95,18 @@ img[src*="assets/icons/"]{
   .incident-notice-inner{width:calc(100% - 32px);align-items:flex-start;gap:9px;flex-direction:column}
   .incident-notice p{font-size:10px}
 }
+
+
+/* Enlarged team notice with a dedicated warning symbol */
+.incident-notice{background:#fff9f9}
+.incident-notice-inner{min-height:78px;padding:15px 0;gap:14px;align-items:center}
+.incident-warning-icon{display:block;width:23px !important;height:23px !important;max-width:23px !important;max-height:23px !important;flex:0 0 23px !important}
+.incident-notice-copy{min-width:0;display:grid;gap:5px}
+.incident-label{display:inline-block;width:max-content;padding:0;border:0;font-size:10px;letter-spacing:.12em}
+.incident-notice p{font-size:12px;line-height:1.55}
+@media(max-width:650px){
+ .incident-notice-inner{min-height:0;padding:13px 0;display:flex;flex-direction:row;align-items:flex-start;gap:11px}
+ .incident-warning-icon{width:21px !important;height:21px !important;max-width:21px !important;max-height:21px !important;flex-basis:21px !important;margin-top:1px}
+ .incident-label{font-size:9px}
+ .incident-notice p{font-size:11px}
+}
