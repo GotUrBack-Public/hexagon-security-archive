@@ -1,37 +1,50 @@
 # Hexagon Security Archive
 
-A lightweight public index of Hexagon Security Cases (HCS).
+Öffentliches Verzeichnis der Hexagon Security Cases (HCS), gestaltet als mehrseitige, responsive Website mit heller, institutioneller Gestaltung.
 
-## Website
+## Projektstruktur
 
-The site is a static, dependency-free HTML page in `index.html`. It includes:
-- HCS registry with search and priority filtering
-- Low / Medium / High priority labels
-- Numeric archive scores (not automatically CVSS scores)
-- Links to the individual advisory repositories
-- Organization and disclosure notes
+```
+.
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── cases/
+│   └── HCS-ASA-2026-001.html
+└── README.md
+```
 
-## Current entries
+## Funktionen
 
-| HCS ID | Priority | Score | Report |
+- HCS-Register mit Suchfunktion und Prioritätsfilter
+- Einheitliche Kennungen und Prioritätsstufen Low / Medium / High
+- Numerische Scores auf einer Skala von 0 bis 10
+- Eigene Detailseite pro Sicherheitsmeldung
+- Responsive Darstellung für Mobilgeräte und Desktop
+- Keine Framework- oder Build-Abhängigkeiten
+
+## Veröffentlichte Sicherheitsmeldungen
+
+| HCS-Kennung | Priorität | Score | Bericht |
 | --- | --- | ---: | --- |
-| HCS-ASA-2026-001 | Low | 2.3/10 | https://github.com/GotUrBack-Public/HCS-ASA-2026-001 |
+| HCS-ASA-2026-001 | Low | 2,3/10 | [Originalbericht](https://github.com/GotUrBack-Public/HCS-ASA-2026-001) |
 
-## Updating the archive
+## Neue HCS-Meldung hinzufügen
 
-Edit the entries in `index.html`. Each entry is an `<a class="entry">` element inside `#entries`. Set:
-- `data-id` to the lowercase HCS identifier
-- `data-priority` to `low`, `medium`, or `high`
-- the visible HCS identifier, priority badge, score, and report URL
+1. Eine neue HTML-Fallakte unter `cases/` anlegen.
+2. In `index.html` einen weiteren `.registry-row`-Eintrag ergänzen.
+3. Die Werte `data-id` und `data-priority` für Suche und Filter setzen.
+4. Kennung, Priorität, Score und Link zur Fallakte eintragen.
 
-Update the total count near the top when adding entries.
+Prioritätswerte für `data-priority`: `low`, `medium`, `high`.
 
 ## GitHub Pages
 
-To publish this static site, open the repository's **Settings → Pages** and select **Deploy from a branch**, branch **main**, folder **/(root)**, then save.
+Unter **Settings → Pages → Build and deployment** die Option **Deploy from a branch** auswählen, Branch `main` und Ordner `/(root)` einstellen und speichern.
 
-## Accuracy and disclosure
+## Bewertung
 
-Team composition and .onion presence descriptions are presented as organization-provided statements, not independently verified facts. Do not publish an onion address unless it has been confirmed as an official address. Archive scores are separate from CVSS unless a report explicitly defines otherwise.
-
-Only include security research that is authorized and responsibly disclosed.
+Die HCS-Scores sind die Bewertungsskala dieses Archivs und nicht automatisch CVSS-Werte.
