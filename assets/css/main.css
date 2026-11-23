@@ -21,3 +21,42 @@
 .research-signals small{font-size:9px;color:var(--muted);margin-top:3px}
 @media(max-width:760px){.hero-inner{grid-template-columns:1fr;gap:22px}.research-signals{grid-template-columns:1fr}.research-signals>div+div{border-left:0;border-top:1px solid var(--line)}}
 @media(max-width:480px){.identity-mark{width:29px;height:29px}.main-nav img{width:15px;height:15px}.hero h1{font-size:34px}.aside-number{font-size:29px}.team-number{font-size:22px}}
+
+
+/* Final icon-size normalization: override intrinsic SVG dimensions everywhere. */
+img[src*="assets/icons/"]{
+  width:14px !important;
+  height:14px !important;
+  max-width:14px !important;
+  max-height:14px !important;
+  object-fit:contain;
+  flex:0 0 14px;
+}
+.identity img.identity-mark{
+  width:28px !important;height:28px !important;
+  max-width:28px !important;max-height:28px !important;
+  flex-basis:28px;
+}
+.seal-wrap img{
+  width:27px !important;height:27px !important;
+  max-width:27px !important;max-height:27px !important;
+  flex-basis:27px;
+}
+.main-nav img{
+  width:12px !important;height:12px !important;
+  max-width:12px !important;max-height:12px !important;
+  flex-basis:12px;
+}
+.research-signals img{
+  width:15px !important;height:15px !important;
+  max-width:15px !important;max-height:15px !important;
+  flex-basis:15px;
+}
+.case-cell>img,.detail-icon{
+  width:14px !important;height:14px !important;
+  max-width:14px !important;max-height:14px !important;
+  flex-basis:14px;
+}
+@media(max-width:480px){
+  .identity img.identity-mark{width:26px !important;height:26px !important;max-width:26px !important;max-height:26px !important;flex-basis:26px}
+}
