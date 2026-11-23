@@ -10,12 +10,12 @@
   const format = value => String(value).padStart(2, "0");
   const update = () => {
     const query = search.value.trim().toLowerCase();
-    const priority = filter.value;
+    const severity = filter.value;
     let visible = 0;
     rows.forEach(row => {
       const matchesText = row.textContent.toLowerCase().includes(query);
-      const matchesPriority = priority === "all" || row.dataset.priority === priority;
-      const show = matchesText && matchesPriority;
+      const matchesSeverity = severity === "all" || row.dataset.priority === severity;
+      const show = matchesText && matchesSeverity;
       row.hidden = !show;
       if (show) visible += 1;
     });
