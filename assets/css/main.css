@@ -60,3 +60,38 @@ img[src*="assets/icons/"]{
 @media(max-width:480px){
   .identity img.identity-mark{width:26px !important;height:26px !important;max-width:26px !important;max-height:26px !important;flex-basis:26px}
 }
+
+
+/* Security incident service notice */
+.incident-notice{
+  width:100%;
+  background:#fffafa;
+  border-top:3px solid #a52828;
+  border-bottom:1px solid #d9aaaa;
+  color:#4b2525;
+}
+.incident-notice-inner{
+  width:min(1080px,calc(100% - 48px));
+  min-height:58px;
+  margin:0 auto;
+  padding:11px 0;
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.incident-label{
+  flex:none;
+  color:#9d2424;
+  border:1px solid #b64a4a;
+  padding:4px 7px;
+  font-size:9px;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+.incident-notice p{margin:0;font-size:11px;line-height:1.5}
+.incident-notice strong{color:#822020}
+@media(max-width:650px){
+  .incident-notice-inner{width:calc(100% - 32px);align-items:flex-start;gap:9px;flex-direction:column}
+  .incident-notice p{font-size:10px}
+}
