@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Hexagon Security Archive – öffentliches Verzeichnis von Hexagon Security Cases.">
+  <meta name="description" content="The Hexagon Security Archive — a public index of Hexagon Security Cases.">
   <title>Hexagon Security Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,17 +13,17 @@
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="identity" href="index.html" aria-label="Hexagon Security Archive Startseite">
-      <span class="identity-mark" aria-hidden="true">H</span>
+    <a class="identity" href="index.html" aria-label="Hexagon Security Archive home">
+      <span class="identity-mark">H</span>
       <span class="identity-copy"><strong>HEXAGON</strong><small>SECURITY ARCHIVE</small></span>
     </a>
-    <nav class="main-nav" aria-label="Hauptnavigation">
-      <a class="active" href="#archive">Sicherheitsmeldungen</a>
-      <a href="#organization">Organisation</a>
-      <a href="https://github.com/GotUrBack-Public/hexagon-security-archive" target="_blank" rel="noopener noreferrer">Quellcode <span aria-hidden="true">↗</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#archive">Advisories</a>
+      <a href="#organization">About</a>
+      <a href="https://github.com/GotUrBack-Public/hexagon-security-archive" target="_blank" rel="noopener noreferrer">Source code <img class="nav-external" src="assets/icons/arrow-up-right.svg" alt=""></a>
     </nav>
   </div>
 </header>
@@ -31,69 +31,68 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <div class="overline"><span class="status-dot"></span> PUBLIC SECURITY RESEARCH REGISTER</div>
-        <h1>Hexagon Security<br><span>Archive</span></h1>
-        <p class="hero-lead">Das zentrale Verzeichnis der Hexagon Security Cases. Dokumentierte Sicherheitsmeldungen, nachvollziehbar kategorisiert und dauerhaft referenzierbar.</p>
-        <a class="button button-primary" href="#archive">Sicherheitsmeldungen aufrufen <span aria-hidden="true">→</span></a>
+        <div class="overline"><span class="status-dot"></span> HEXAGON SECURITY CASES</div>
+        <h1>Security research.<br><span>On record.</span></h1>
+        <p class="hero-lead">The Hexagon Security Archive is the central index of published HCS advisories, with consistent identifiers, severity ratings and direct links to each report.</p>
+        <a class="button button-primary" href="#archive">Browse advisories <span aria-hidden="true">→</span></a>
       </div>
-      <div class="hero-aside" aria-label="Archivübersicht">
-        <div class="aside-label">ARCHIVSTATUS</div>
+      <aside class="hero-aside" aria-label="Archive summary">
+        <div class="aside-label">ARCHIVE OVERVIEW</div>
         <div class="aside-number" id="summary-total">01</div>
-        <div class="aside-caption">Veröffentlichte HCS-Meldungen</div>
+        <div class="aside-caption">Published security cases</div>
         <div class="aside-rule"></div>
-        <div class="aside-meta"><span>Registry</span><strong>HCS / PUBLIC</strong></div>
-        <div class="aside-meta"><span>Prioritätsstufen</span><strong>3</strong></div>
-      </div>
+        <div class="aside-meta"><span>Collection</span><strong>HCS</strong></div>
+        <div class="aside-meta"><span>Severity levels</span><strong>3</strong></div>
+      </aside>
     </div>
   </section>
-  <div class="trust-strip"><div class="container trust-inner"><span><b class="strip-icon">✓</b> Eindeutige Fallkennungen</span><span><b class="strip-icon">✓</b> Einheitliche Priorisierung</span><span><b class="strip-icon">✓</b> Direkte Berichtsreferenzen</span></div></div>
   <section class="section container" id="archive">
     <div class="section-heading">
-      <div><div class="section-kicker">REGISTER / HCS</div><h2>Sicherheitsmeldungen</h2><p>Durchsuchen Sie das Verzeichnis nach Fallkennung oder Priorität.</p></div>
-      <div class="record-count"><strong id="record-count">01</strong><span>Einträge</span></div>
+      <div><div class="section-kicker">HCS / ADVISORY INDEX</div><h2>Published advisories</h2><p>Search by advisory ID or filter by severity.</p></div>
+      <div class="record-count"><strong id="record-count">01</strong><span>Records</span></div>
     </div>
     <div class="filters">
-      <label class="search-wrap"><span class="sr-only">Archiv durchsuchen</span><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Fallkennung oder Stichwort suchen"></label>
-      <label class="filter-wrap"><span class="sr-only">Priorität auswählen</span><select id="priority-filter"><option value="all">Alle Prioritäten</option><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></label>
+      <label class="search-wrap"><img src="assets/icons/search.svg" alt=""><span class="sr-only">Search advisories</span><input id="search-input" type="search" placeholder="Search by ID or keyword"></label>
+      <label class="filter-wrap"><span class="sr-only">Filter by severity</span><select id="priority-filter"><option value="all">All severities</option><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></label>
     </div>
-    <div class="registry" role="table" aria-label="HCS-Sicherheitsmeldungen">
-      <div class="registry-head" role="row"><span>Fallkennung / Titel</span><span>Priorität</span><span>Score</span><span>Bericht</span></div>
+    <div class="registry" aria-label="HCS advisories">
+      <div class="registry-head"><span>Advisory / Reference</span><span>Severity</span><span>Score</span><span>Report</span></div>
       <div id="registry-entries">
-        <article class="registry-row" data-id="hcs-asa-2026-001" data-priority="low" role="row">
+        <article class="registry-row" data-id="hcs-asa-2026-001" data-priority="low">
           <div class="case-cell"><a class="case-id" href="cases/HCS-ASA-2026-001.html">HCS-ASA-2026-001</a><span class="case-type">Hexagon Security Advisory</span></div>
           <div><span class="priority priority-low">Low</span></div>
-          <div class="score">2,3 <span>/ 10</span></div>
-          <a class="report-link" href="cases/HCS-ASA-2026-001.html">Fallakte öffnen <span aria-hidden="true">→</span></a>
+          <div class="score">2.3 <span>/ 10</span></div>
+          <a class="report-link" href="cases/HCS-ASA-2026-001.html">View case <span aria-hidden="true">→</span></a>
         </article>
       </div>
-      <div class="empty-state" id="empty-state" hidden>Keine passenden Sicherheitsmeldungen gefunden.</div>
+      <div class="empty-state" id="empty-state" hidden>No matching advisories found.</div>
     </div>
-    <p class="method-note"><strong>Bewertungssystem:</strong> Die numerischen Scores dienen der internen Einordnung im HCS-Register. Sie sind nicht mit CVSS-Werten gleichzusetzen.</p>
+    <p class="method-note"><strong>Scoring:</strong> HCS scores use the archive's own 0–10 scale and should not be interpreted as CVSS scores.</p>
   </section>
   <section class="organization-section" id="organization">
     <div class="container">
       <div class="section-heading">
-        <div><div class="section-kicker">ÜBER HEXAGON</div><h2>Organisation & Forschung</h2><p>Unabhängige Sicherheitsforschung mit unterschiedlichen fachlichen Perspektiven.</p></div>
+        <div><div class="section-kicker">HEXAGON</div><h2>Research team & presence</h2><p>Independent security research across different technical disciplines.</p></div>
       </div>
       <div class="organization-grid">
         <article class="info-panel team-panel">
-          <div class="panel-symbol" aria-hidden="true">◈</div>
+          <img class="panel-icon" src="assets/icons/users.svg" alt="">
           <div class="panel-eyebrow">RESEARCH TEAM</div>
           <div class="team-number">07</div>
-          <h3>Unabhängige Sicherheitsforscher</h3>
-          <p>Das Hexagon-Team besteht aus sieben unabhängigen Researchern mit unterschiedlichen Spezialisierungen und Erfahrungen aus den Bereichen White Hat, Grey Hat und Black Hat Security Research.</p>
+          <h3>Independent researchers</h3>
+          <p>Seven independent security researchers work across different areas of expertise and bring experience from white-hat, grey-hat and black-hat security research.</p>
         </article>
         <article class="info-panel presence-panel">
-          <div class="panel-symbol" aria-hidden="true">⌘</div>
-          <div class="panel-eyebrow">DIGITAL PRESENCE</div>
-          <h3>Öffentliche und Onion-Präsenz</h3>
-          <p>Hexagon genießt in der Security-Research-Szene einen guten Ruf und betreibt eine öffentliche Präsenz auf GitHub sowie einen eigenen .onion-Dienst. Die Forschungsarbeit wird in einer klar strukturierten Form dokumentiert und veröffentlicht.</p>
-          <a class="inline-link" href="https://github.com/GotUrBack-Public" target="_blank" rel="noopener noreferrer">Hexagon auf GitHub <span aria-hidden="true">↗</span></a>
+          <img class="panel-icon" src="assets/icons/globe.svg" alt="">
+          <div class="panel-eyebrow">ONLINE PRESENCE</div>
+          <h3>Public and onion services</h3>
+          <p>Hexagon maintains a public presence on GitHub and operates an onion service. The group has built a strong reputation within the security research community.</p>
+          <a class="inline-link" href="https://github.com/GotUrBack-Public" target="_blank" rel="noopener noreferrer">Visit Hexagon on GitHub <img src="assets/icons/arrow-up-right.svg" alt=""></a>
         </article>
       </div>
     </div>
   </section>
 </main>
-<footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#">HEXAGON SECURITY ARCHIVE</a><span>HCS · Public Security Research Register</span><a href="https://github.com/GotUrBack-Public/hexagon-security-archive">GitHub Repository ↗</a></div></footer>
+<footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#">HEXAGON SECURITY ARCHIVE</a><span>HCS · Security Advisory Index</span><a href="https://github.com/GotUrBack-Public/hexagon-security-archive">Repository <img src="assets/icons/arrow-up-right.svg" alt=""></a></div></footer>
 </body>
 </html>
