@@ -110,3 +110,44 @@ img[src*="assets/icons/"]{
  .incident-label{font-size:9px}
  .incident-notice p{font-size:11px}
 }
+
+
+/* Further enlargement of the team notice */
+.incident-notice-inner{
+  min-height:136px;
+  padding:24px 0;
+  gap:20px;
+}
+.incident-warning-icon{
+  width:40px !important;
+  height:40px !important;
+  max-width:40px !important;
+  max-height:40px !important;
+  flex:0 0 40px !important;
+}
+.incident-notice-copy{gap:9px}
+.incident-label{
+  font-size:14px;
+  letter-spacing:.13em;
+}
+.incident-notice p{
+  font-size:16px;
+  line-height:1.6;
+}
+@media(max-width:650px){
+  .incident-notice-inner{
+    min-height:0;
+    padding:20px 0;
+    gap:14px;
+  }
+  .incident-warning-icon{
+    width:32px !important;
+    height:32px !important;
+    max-width:32px !important;
+    max-height:32px !important;
+    flex-basis:32px !important;
+  }
+  .incident-notice-copy{gap:7px}
+  .incident-label{font-size:12px}
+  .incident-notice p{font-size:14px;line-height:1.55}
+}
